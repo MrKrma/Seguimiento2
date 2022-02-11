@@ -38,4 +38,13 @@ public class Recipe {
 	public List<Ingredient> getIngredients(){
 		return ingredients;
 	}
+	
+	public void removeIngredient(String name) {
+		Ingredient searched = null;
+		for (int i = 0; i < ingredients.size() && searched==null; i++) {
+			if(ingredients.get(i).getName().equals(name)){
+				ingredients.remove(i);
+			}
+		}
+	}
 }
